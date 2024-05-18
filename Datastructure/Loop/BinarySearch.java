@@ -1,5 +1,5 @@
 // Write a code for binary tree traversal using loop
-
+// Adding for git commit
 public class BinarySearch {
     public static int binarySearch(int[] arr, int target) {
         int left = 0;
