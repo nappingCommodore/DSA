@@ -5,11 +5,15 @@ public class NestedForLoop {
         // create a 2D array
         int n = 10;
         int m = 20;
-        // int[][] numbers = new int[][]{{1, 2, 3}, {4, 5, 6}, {7,8, 9}};
+        int[][] numbers = new int[][]{
+            {1, 2, 3}, 
+            {4, 5, 6}, 
+            {7, 8, 9}
+        };
         // print the array
-        for (int i = 0; i < n; i++) {
-            for(int j = 0; j < m; j++) {
-                System.out.print(" * ");
+        for (int i = 0; i < numbers.length; i++) {
+            for(int j = 0; j < numbers[i].length; j++) {
+                System.out.print(numbers[i][j] + " ");
             }
             System.out.println(); // Adding new line after each row
         }
@@ -19,3 +23,7 @@ public class NestedForLoop {
         }
     }
 }
+
+1 2 3
+4 5 6
+7 8 9

@@ -1,16 +1,16 @@
 // Example of string creation and use
-public class StringExample {
-    public static void main(String[] args) {
-        // create a string
-        String str = "Hello, World!";
-        // print the string
-        System.out.println(str);
-        // create a string using the new keyword
-        String str2 = new String("Hello, World!");
-        // print the string
-        System.out.println(str2);
-    }
-}
+// public class StringExample {
+//     public static void main(String[] args) {
+//         // create a string
+//         String str = "Hello, World!";
+//         // print the string
+//         System.out.println(str);
+//         // create a string using the new keyword
+//         String str2 = new String("Hello, World!");
+//         // print the string
+//         System.out.println(str2);
+//     }
+// }
 
 // Example of different string methods 
 public class StringExample {
