@@ -1,4 +1,4 @@
-// Merge two sorted arrays without using extra space
+// Merge two sorted arrays
 
 public class MergeSortedArray {
     public static void main(String[] args) {
@@ -17,15 +17,32 @@ public class MergeSortedArray {
     public static void merge(int[] arr1, int[] arr2) {
         int n = arr1.length;
         int m = arr2.length;
-        for (int i = n - 1; i >= 0; i--) {
-            int j, last = arr2[m - 1];
-            for (j = m - 2; j >= 0 && arr2[j] > arr1[i]; j--) {
-                arr2[j + 1] = arr2[j];
+        int[] finalArray = new int[n + m];
+        int i = 0, j = 0, k = 0;
+
+        while (i < n && j < m) {
+            if (arr1[i] <= arr2[j]) {
+                finalArray[k++] = arr1[i++];
+            } else {
+                finalArray[k++] = arr2[j++];
             }
-            if (j != m - 2 || last > arr1[i]) {
-                arr2[j + 1] = arr1[i];
-                arr1[i] = last;
-            }
+        }
+
+        while (i < n) {
+            finalArray[k++] = arr1[i++];
+        }
+
+        while (j < m) {
+            finalArray[k++] = arr2[j++];
+        }
+
+        // Copy the merged array back to arr1 and arr2
+        for (int x = 0; x < n; x++) {
+            arr1[x] = finalArray[x];
+        }
+
+        for (int x = 0; x < m; x++) {
+            arr2[x] = finalArray[n + x];
         }
     }
 }
